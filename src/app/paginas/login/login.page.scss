@@ -1,15 +1,14 @@
-ion-header{
-    height: 50px;
-    margin-bottom: 80px;
+.topo{
+    height: 20px;
+    margin-bottom: 40px;
 }
 
 ion-img{
-    margin-top:30px;
-    width: 250px;
+    width: 140px;
     align-self: center;
     margin:auto;
     display: block;
-    padding: 10px;
+    margin-bottom: 50px;
 }
 
 form{
@@ -22,8 +21,10 @@ form{
 
 p{
     text-align: center;
-    font-weight: 700;
+    font-weight: 800;
     color:0D0D0D;
     padding-left: 10px;
     padding-right: 10px;
+    margin-bottom: 30px;
+
 }

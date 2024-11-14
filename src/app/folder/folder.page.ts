@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-folder',
@@ -7,11 +8,34 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
-  public folder!: string;
-  private activatedRoute = inject(ActivatedRoute);
-  constructor() {}
+  imagensGrid!: any[];
+
+  constructor(public nav: NavController) { }
+
+  equipamentos(){
+    this.nav.navigateForward('sel-equipamento');
+  }
+
+  equipamentoItem(){
+    this.nav.navigateForward('add-edit-equipamento-item');
+  }
 
   ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    this.imagensGrid = [
+      {
+        img: 'assets/livros-brasileiros.jpg',
+        name: 'Livros'
+      },
+      {
+        img: 'assets/loan.png',
+        name: 'Emprestimo'
+      },
+      
+    ]
   }
+
+  navegacao(){
+    
+  }
+
 }
